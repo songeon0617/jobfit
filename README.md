@@ -79,7 +79,7 @@ For Cloudflare Pages:
 4. Set the output directory to `dist`.
 5. No environment variables are required.
 
-The `public/_headers` file adds restrictive browser security headers on Cloudflare Pages-compatible hosts.
+The document includes a restrictive Content Security Policy and referrer policy for static-host portability. The `public/_headers` file adds further browser security headers on Cloudflare Pages-compatible hosts.
 
 The repository also includes `.github/workflows/deploy-pages.yml` as a free deployment fallback. On a public GitHub repository, enable Pages with **GitHub Actions** as the source; each push to `main` then validates and deploys the site automatically. The relative Vite asset base keeps the same build compatible with both GitHub Pages project paths and root-domain static hosts.
 
